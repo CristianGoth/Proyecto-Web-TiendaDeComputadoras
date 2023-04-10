@@ -100,21 +100,6 @@ body {
   .btn-secondary {
     margin-left: 10px;
   }
-  
-  footer {
-    background-color: rgb(44, 48, 54);
-    color: rgb(255, 255, 255);
-    padding: 30px 0;
-    margin: 5%, 0%, 0%, 0%;
-  }
-  
-  /* Título del footer */
-  footer h3 {
-    color: white;
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-
 
 /* Estilos de los productos */
 main {
@@ -214,27 +199,52 @@ p{
   transition: background-color 0.3s ease-in-out;
   margin: 0% 0% 0% 5%;
 }
-.social-media-icons a {
-  margin-right: 10px;
+
+footer {
+  background-color: #000;
   color: #fff;
+  padding: 3% 0%;
 }
 
-.social-media-icons a:hover {
-  color: #007bff;
+footer h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.fa-facebook {
-  color: #3b5998;
+footer p {
+  margin-bottom: 10px;
 }
 
-.fa-twitter {
-  color: #00acee;
+.social-media {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.fa-instagram {
-  color: #e4405f;
+.social-media li {
+  margin-left: 15px;
 }
 
-.fa-envelope {
+.social-media a {
   color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.social-media a:hover {
+  color: #aaa;
+}
+
+.pfot{
+  text-align: left;
+}
+.icono{
+  width: 10%;
+  margin: 0% 0% 0% 2%;
+}
+.f3{
+  text-align: right;
 }
