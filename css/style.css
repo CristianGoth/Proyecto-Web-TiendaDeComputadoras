@@ -203,7 +203,8 @@ p{
 footer {
   background-color: #000;
   color: #fff;
-  padding: 3% 0%;
+  width: 100%;
+  padding: 2% 0%;
 }
 
 footer h3 {
