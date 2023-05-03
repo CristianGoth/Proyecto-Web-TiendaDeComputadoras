@@ -2,11 +2,12 @@ const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
-	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-	password: /^.{4,12}$/, // 4 a 12 digitos.
+	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, 
+	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, 
+	password: /^.{4,12}$/, 
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
+	telefono: /^\d{7,14}$/, 
+	mensaje: /^[a-zA-ZÀ-ÿ\s]{1,40}$/ 
 }
 
 const campos = {
@@ -14,7 +15,8 @@ const campos = {
 	nombre: false,
 	password: false,
 	correo: false,
-	telefono: false
+	telefono: false,
+	mensaje:false
 }
 
 const validarFormulario = (e) => {
@@ -38,6 +40,9 @@ const validarFormulario = (e) => {
 		case "telefono":
 			validarCampo(expresiones.telefono, e.target, 'telefono');
 		break;
+		case "mensaje":
+			validarCampo(expresiones,mensajes, e.target, 'mensajes');
+		break;
 	}
 }
 
@@ -48,6 +53,7 @@ const validarCampo = (expresion, input, campo) => {
 		document.querySelector(`#grupo__${campo} i`).classList.add('fa-check-circle');
 		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-times-circle');
 		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove('formulario__input-error-activo');
+		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
 		campos[campo] = true;
 	} else {
 		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-incorrecto');
@@ -55,6 +61,7 @@ const validarCampo = (expresion, input, campo) => {
 		document.querySelector(`#grupo__${campo} i`).classList.add('fa-times-circle');
 		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-check-circle');
 		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add('formulario__input-error-activo');
+		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
 		campos[campo] = false;
 	}
 }
@@ -104,3 +111,34 @@ formulario.addEventListener('submit', (e) => {
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
 	}
 });
+
+window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+  /* customize formbutton below*/     
+  formbutton("create", {
+    action: "https://formspree.io/f/xzbqovaw",
+    title: "How can we help?",
+    fields: [
+      { 
+        type: "email", 
+        label: "Email:", 
+        name: "email",
+        required: true,
+        placeholder: "your@email.com"
+      },
+      {
+        type: "textarea",
+        label: "Message:",
+        name: "message",
+        placeholder: "What's on your mind?",
+      },
+      { type: "submit" }      
+    ],
+    styles: {
+      title: {
+        backgroundColor: "gray"
+      },
+      button: {
+        backgroundColor: "gray"
+      }
+    }
+  });

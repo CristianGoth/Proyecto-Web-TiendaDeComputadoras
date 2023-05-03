@@ -411,7 +411,7 @@ text-align: center;}
 .formulario {
   width: 80%;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr, 1fr 1fr;
 	gap: 20px;
 }
 
@@ -421,7 +421,9 @@ text-align: center;}
 	padding: 10px;
 	cursor: pointer;
 }
-
+.reg{
+  text-align: center;
+}
 .formulario__grupo-input {
 	position: relative;
 }
@@ -527,7 +529,9 @@ text-align: center;}
 	color: #1ed12d;
 	opacity: 1;
 }
-
+.formulario__input-error{
+  color: #000;
+}
 .formulario__grupo-incorrecto .formulario__label {
 	color: #bb2929;
 }
