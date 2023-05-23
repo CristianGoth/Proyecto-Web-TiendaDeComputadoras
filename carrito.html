@@ -45,125 +45,48 @@
       </div>
     </nav>
     </header>
-<body>
-  <section class="carrito3">
-    <div class="carrito2">
-        <h1>Carrito de Compras</h1>
-        <hr>
+    <div id="cart-items">
+      <h2>Productos en el carrito:</h2>
+      <ul id="cart-list"></ul>
+      <h3>Total: <span id="cart-total">$0</span></h3>
+      <button id="checkout-btn">Finalizar compra</button>
+      <button id="clear-btn">Vaciar carrito</button>
+    </div>
+    <footer class="bg-dark text-light">
+      <div class="container py-4">
         <div class="row">
-            <div class="col-md-8">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Producto</th>
-                            <th>Precio</th>
-                            <th>Cantidad</th>
-                            <th>Total</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody class="carrito3">
-                        <tr>
-                            <td>
-                                <img class="carrito" src="img/rtx3080.png" alt="Producto 1">
-                                Producto 1
-                            </td>
-                            <td>399.990</td>
-                            <td>
-                                <button class="btn btn-primary btn-sm restar">-</button>
-                                <input type="text" class="form-control input-sm cantidad" value="1">
-                                <button class="btn btn-primary btn-sm sumar">+</button>
-                            </td>
-                            <td>399.99</td>
-                            <td>
-                                <button class="btn btn-danger btn-sm eliminar">Eliminar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img class="carrito" src="img/monitorTUF.png" alt="Producto 2">
-                                Producto 2
-                            </td>
-                            <td>$149.99</td>
-                            <td>
-                                <button class="btn btn-primary btn-sm restar">-</button>
-                                <input type="text" class="form-control input-sm cantidad" value="2">
-                                <button class="btn btn-primary btn-sm sumar">+</button>
-                            </td>
-                            <td>$149.99</td>
-                            <td>
-                                <button class="btn btn-danger btn-sm eliminar">Eliminar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                          <td>
-                              <img class="carrito" src="img/placam.png" alt="Producto 2">
-                              Producto 2
-                          </td>
-                          <td>$149.99</td>
-                          <td>
-                              <button class="btn btn-primary btn-sm restar">-</button>
-                              <input type="text" class="form-control input-sm cantidad" value="2">
-                              <button class="btn btn-primary btn-sm sumar">+</button>
-                          </td>
-                          <td>$149.99</td>
-                          <td>
-                              <button class="btn btn-danger btn-sm eliminar">Eliminar</button>
-                          </td>
-                      </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-md-4">
-              <div class="card">
-                  <div class="card-header">Resumen de Compra</div>
-                  <div class="card-body">
-                      <div><p>Subtotal: $558,87</p>
-                      <p>Impuestos: $131,09</p>
-                      <p>Total: $689,97</p>
-                    
-                      <button class="btn btn-success btn-block">Finalizar Compra</button>
-                  </div>
-              </div>
+          <div class="col-md-4">
+            <h3>Contacto</h3>
+            <p class="pfot">Teléfono: 555-123-4567</p>
+            <p class="pfot">Email: info@HomeComputer.com</p>
+            <p class="pfot">Dirección: 1 Norte 213, Viña del mar</p>
+            <br>
+            <p class="pfot">&copy; 2023 HomeComputer. Todos los derechos reservados.</p>
+          </div>
+          <div class="col-md-4">
+            <h3>Horario</h3>
+            <p class="pfot">Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+            <p class="pfot">Sábado: 10:00 AM - 2:00 PM</p>
+            <p class="pfot">Domingo: Cerrado</p>
+          </div>
+          <div class="col-md-4">
+            <h3>Redes sociales</h3>
+            <ul class="list-unstyled">
+              <a href="https://www.whatsapp.com/?lang=es" target="_blank">
+                <img class="icono" src="img/whatsapp.png">
+              </a>
+              <a href="https://www.facebook.com" target="_blank">
+                <img class="icono" src="img/facebook.png">
+              </a>
+              <a href="https://www.instagram.com" target="_blank">
+                <img class="icono" src="img/instagram.png">
+              </a>
+            </ul>
           </div>
         </div>
       </div>
-</section>
-<footer class="bg-dark text-light">
-  <div class="container py-4">
-    <div class="row">
-      <div class="col-md-4">
-        <h3>Contacto</h3>
-        <p class="pfot">Teléfono: 555-123-4567</p>
-        <p class="pfot">Email: info@HomeComputer.com</p>
-        <p class="pfot">Dirección: 1 Norte 213, Viña del mar</p>
-        <br>
-        <p class="pfot">&copy; 2023 HomeComputer. Todos los derechos reservados.</p>
-      </div>
-      <div class="col-md-4">
-        <h3>Horario</h3>
-        <p class="pfot">Lunes a Viernes: 9:00 AM - 6:00 PM</p>
-        <p class="pfot">Sábado: 10:00 AM - 2:00 PM</p>
-        <p class="pfot">Domingo: Cerrado</p>
-      </div>
-      <div class="col-md-4">
-        <h3>Redes sociales</h3>
-        <ul class="list-unstyled">
-          <a href="https://www.whatsapp.com/?lang=es" target="_blank">
-            <img class="icono" src="img/whatsapp.png">
-          </a>
-          <a href="https://www.facebook.com" target="_blank">
-            <img class="icono" src="img/facebook.png">
-          </a>
-          <a href="https://www.instagram.com" target="_blank">
-            <img class="icono" src="img/instagram.png">
-          </a>
-        </ul>
-      </div>
-    </div>
-  </div>
-</footer>
+    </footer>
+  <script src="js/carrito.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
