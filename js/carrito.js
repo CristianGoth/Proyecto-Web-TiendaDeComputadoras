@@ -1,19 +1,42 @@
 let cartItems = [];
 
 function addToCart(productName, price, imageSrc) {
-  const item = {
-    name: productName,
-    price: price,
-    imageSrc: imageSrc
-  };
-  cartItems.push(item);
+  const existingItem = cartItems.find(item => item.name === productName);
+
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    const item = {
+      name: productName,
+      price: price,
+      imageSrc: imageSrc,
+      quantity: 1
+    };
+    cartItems.push(item);
+  }
+
   localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  updateCart();
 }
 
 function removeCartItem(index) {
   cartItems.splice(index, 1);
   localStorage.setItem('cartItems', JSON.stringify(cartItems));
   updateCart();
+}
+
+function increaseQuantity(index) {
+  cartItems[index].quantity += 1;
+  localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  updateCart();
+}
+
+function decreaseQuantity(index) {
+  if (cartItems[index].quantity > 1) {
+    cartItems[index].quantity -= 1;
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    updateCart();
+  }
 }
 
 function updateCart() {
@@ -38,6 +61,24 @@ function updateCart() {
     price.innerText = `$${item.price.toFixed(2)}`;
     li.appendChild(price);
 
+    const quantity = document.createElement('span');
+    quantity.innerText = `Cantidad: ${item.quantity}`;
+    li.appendChild(quantity);
+
+    const increaseBtn = document.createElement('button');
+    increaseBtn.innerText = '+';
+    increaseBtn.addEventListener('click', () => {
+      increaseQuantity(index);
+    });
+    li.appendChild(increaseBtn);
+
+    const decreaseBtn = document.createElement('button');
+    decreaseBtn.innerText = '-';
+    decreaseBtn.addEventListener('click', () => {
+      decreaseQuantity(index);
+    });
+    li.appendChild(decreaseBtn);
+
     const removeBtn = document.createElement('button');
     removeBtn.innerText = 'Eliminar';
     removeBtn.addEventListener('click', () => {
@@ -46,7 +87,7 @@ function updateCart() {
     li.appendChild(removeBtn);
 
     cartList.appendChild(li);
-    totalPrice += item.price;
+    totalPrice += item.price * item.quantity;
   });
 
   const cartTotal = document.getElementById('cart-total');
@@ -84,7 +125,7 @@ window.addEventListener('DOMContentLoaded', () => {
     updateCart();
   }
 
-  if (window.location.pathname.includes('cart.html')) {
+  if (window.location.pathname.includes('carrito.html')) {
     const checkoutBtn = document.getElementById('checkout-btn');
     checkoutBtn.addEventListener('click', checkout);
 
