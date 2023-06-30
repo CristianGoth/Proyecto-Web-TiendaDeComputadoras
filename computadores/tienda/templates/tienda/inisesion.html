@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tienda de Computadoras</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <img class="logo" src="/img/Mi proyecto (1).png" alt="">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ofertas.html">Ofertas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="carrito.html">
+                <img src="img/carrito-de-compras.png" width="30" height="30" alt="Carrito de Compras">
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="inisesion.html">
+                <img src="img/usuario.png" width="30" height="30" alt="Iniciar sesíon">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      </header>
+    <div class="container mt-5">
+      <h1>Inicio de Sesión</h1>
+      <form action="" class="formulario" id="formulario">
+        <div class="formulario__grupo" id="grupo__correo">
+          <label for="correo" class="formulario__label">Correo Electrónico</label>
+          <div class="formulario__grupo-input">
+            <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+        </div>
+        <div class="formulario__grupo" id="grupo__password">
+          <label for="password" class="formulario__label">Contraseña</label>
+          <div class="formulario__grupo-input">
+            <input type="password" class="formulario__input" name="password" id="password">
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+        </div>
+        <div class="form-check mb-3">
+          <input type="checkbox" class="form-check-input" id="checkStayLoggedIn">
+          <label class="form-check-label" for="checkStayLoggedIn">Mantenerme conectado</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+      <p class="mt-3">¿No tienes una cuenta? <a href="registrosesi.html">Regístrate aquí</a></p>
+    </form>     
+    <br>
+    <br>
+    <br>
+    </div>
+    <footer class="bg-dark text-light">
+      <div class="container py-4">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Contacto</h3>
+            <p class="pfot">Teléfono: 555-123-4567</p>
+            <p class="pfot">Email: info@HomeComputer.com</p>
+            <p class="pfot">Dirección: 1 Norte 213, Viña del mar</p>
+            <br>
+            <p class="pfot">&copy; 2023 HomeComputer. Todos los derechos reservados.</p>
+          </div>
+          <div class="col-md-4">
+            <h3>Horario</h3>
+            <p class="pfot">Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+            <p class="pfot">Sábado: 10:00 AM - 2:00 PM</p>
+            <p class="pfot">Domingo: Cerrado</p>
+          </div>
+          <div class="col-md-4">
+            <h3>Redes sociales</h3>
+            <ul class="list-unstyled">
+              <a href="https://www.whatsapp.com/?lang=es" target="_blank">
+                <img class="icono" src="img/whatsapp.png">
+              </a>
+              <a href="https://www.facebook.com" target="_blank">
+                <img class="icono" src="img/facebook.png">
+              </a>
+              <a href="https://www.instagram.com" target="_blank">
+                <img class="icono" src="img/instagram.png">
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/validados.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

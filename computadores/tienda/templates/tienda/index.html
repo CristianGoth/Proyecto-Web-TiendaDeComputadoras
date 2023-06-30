@@ -1,0 +1,132 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Tienda de Computadoras</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <img class="logo" src="{% static 'img/Mi proyecto (1).png' %}" alt="">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ofertas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="{% static 'img/carrito-de-compras.png' %}" width="30" height="30" alt="Carrito de Compras">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="{% static 'img/usuario.png' %}" width="30" height="30" alt="Iniciar sesión">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <h1 class="titulo">HOMECOMPUTER</h1>
+        <p class="ptitulo">HomeComputer es un lugar especializado en accesorios para crear tu setup al mejor precio</p>
+    </div>
+    <div class="container">
+        <h1>OFERTAS</h1>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <center><img width="65%" height="65%" src="{% static 'img/rtx3080.png' %}" alt="Tarjeta de Video"></center>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>RTX 3080TI</h5>
+                        <p>Tarjeta de video ASUS ROG STRIX RTX 3080TI OC 12GB GDDR6X.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <center><img width="65%" height="65%" src="{% static 'img/notemsi.png' %}" alt="Notebook Gamer"></center>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Notebook Gamer MSI</h5>
+                        <p>Notebook Gamer MSI GF65 Thin 9SEXR, GeForce RTX2060, i7-9750H, Ram 16GB, 512GB NVMe, 15.6" FHD, W10.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <center><img width="65%" height="65%" src="{% static 'img/monitorTUF.png' %}" alt="Monitor gamer"></center>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Monitor ASUS TUF</h5>
+                        <p>Monitor de juegos Full HD (1920 x 1080) de 23.6 pulgadas con frecuencia de actualización ultra rápida de 144Hz.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+    </div>
+    <footer class="bg-dark text-light">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Contacto</h3>
+                    <p class="pfot">Teléfono: 555-123-4567</p>
+                    <p class="pfot">Email: info@HomeComputer.com</p>
+                    <p class="pfot">Dirección: 1 Norte 213, Viña del mar</p>
+                    <br>
+                    <p class="pfot">&copy; 2023 HomeComputer. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Horario</h3>
+                    <p class="pfot">Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                    <p class="pfot">Sábado: 10:00 AM - 2:00 PM</p>
+                    <p class="pfot">Domingo: Cerrado</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Redes sociales</h3>
+                    <ul class="list-unstyled">
+                        <a href="https://www.whatsapp.com/?lang=es" target="_blank">
+                            <img class="icono" src="{% static 'img/whatsapp.png' %}">
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img class="icono" src="{% static 'img/facebook.png' %}">
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank">
+                            <img class="icono" src="{% static 'img/instagram.png' %}">
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
