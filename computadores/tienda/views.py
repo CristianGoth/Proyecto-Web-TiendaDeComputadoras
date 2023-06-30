@@ -129,7 +129,6 @@ def producto_update(request):
         nombre      = request.POST["nombre"]
         marca       = request.POST["marca"]
         descripcion = request.POST["detalle"]
-        talla       = request.POST["talla"]
         precio      = request.POST["precio"]
         stock       = request.POST["stock"]
 
@@ -142,7 +141,6 @@ def producto_update(request):
         objProducto.nombre          = nombre
         objProducto.marca           = marca
         objProducto.descripcion     = descripcion
-        objProducto.talla           = talla
         objProducto.precio          = precio
         objProducto.stock           = stock
         
