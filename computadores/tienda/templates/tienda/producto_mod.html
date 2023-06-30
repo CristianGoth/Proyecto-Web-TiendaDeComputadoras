@@ -1,51 +1,51 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <head>
-        <title>Tienda de Computadoras</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="{% static tienda/css/style.css %}">
-      </head>
+    <title>Tienda de Computadoras</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'tienda/css/style.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
 <body>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-              <img class="logo" src="/img/Mi proyecto (1).png" alt="">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <img class="logo" src="{% static 'tienda/img/Mi proyecto (1).png' %}" alt="">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url index.html %}" id="index">Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'ofertas.html' %}" id="ofertas" >Ofertas</a>
-                </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url productos.html %}" id="productos">Productos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url contacto.html %}" id="contacto">Contacto</a>
-                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}" id='index'>Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'ofertas'%}" id='ofertas'>Ofertas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'productos' %}" id='productos'>Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contacto' %}" id='Contacto'>Contacto</a>
+                    </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url carrito.html %}" id="carrito">
-                      <img src="img/carrito-de-compras.png" width="30" height="30" alt="Carrito de Compras">
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url inisesion.html %}" id="inisesion">
-                      <img src="img/usuario.png" width="30" height="30" alt="Iniciar sesíon">
-                    </a>
-                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'carrito' %}" id="carrito">
+                            <img src="{% static 'tienda/img/carrito-de-compras.png' %}" width="30" height="30" alt="Carrito de Compras">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'inisesion' %}" id"inisesion">
+                            <img src="{% static 'tienda/img/usuario.png' %}" width="30" height="30" alt="Iniciar sesión">
+                        </a>
+                    </li>
                 </ul>
-              </div>
-            </nav>
-            </header>
+            </div>
+        </nav>
+    </header>
         
         <!--Titulo central-->
         <div id="fuente-titulo" class="p-5 text-center">
@@ -99,26 +99,38 @@
         
         <br>
         <br>
-        <footer id="fuente-footer" class="row p-5 ancho-total m-0">
-            <div class="col-xs-12 col-md-6 col-lg-3">
-                <h4 class="fw-bold">DALE LA VUELTA</h4>
-                <p class="m-0 small text-secondary">Somos un equipo de jovenes dispuestos a darle una nueva vida a tu computador.</p>
-            </div>
-            <div class="col-xs-12 col-md-6 col-lg-3">
-                <h4 class="fw-bold">Informacion de contacto</h4>
-                <p class="m-0 small text-secondary">Teléfono de contacto: +569 1234 5678</p>
-                <p class="small text-secondary">Dirección: Avenida Libertad #123, Viña del Mar</p>
-            </div>
-            <div class="col-xs-12 col-md-6 col-lg-3">
-                <h4 class="fw-bold">Redes sociales</h4>
-                <i id="animacion" class="fa-brands fa-whatsapp pe-1 animacion"></i><i class="fa-brands fa-instagram animacion"></i>
-                <p class="m-0 small text-secondary">WhatsApp: +569 1234 5678</p>
-                <p class="small text-secondary">Instagram: @homecomputer</p>
-            </div>
-            <div class="col-xs-12 col-md-6 col-lg-3">
-                <h4 class="fw-bold">Info adicional</h4>
-                <p class="m-0 small text-secondary animacion">Preguntas frecuentes</p>
-                <p class="small text-secondary animacion">Opiniones de clientes</p>
+        <footer class="bg-dark text-light">
+            <div class="container py-4">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>Contacto</h3>
+                        <p class="pfot">Teléfono: 555-123-4567</p>
+                        <p class="pfot">Email: info@HomeComputer.com</p>
+                        <p class="pfot">Dirección: 1 Norte 213, Viña del mar</p>
+                        <br>
+                        <p class="pfot">&copy; 2023 HomeComputer. Todos los derechos reservados.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Horario</h3>
+                        <p class="pfot">Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                        <p class="pfot">Sábado: 10:00 AM - 2:00 PM</p>
+                        <p class="pfot">Domingo: Cerrado</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Redes sociales</h3>
+                        <ul class="list-unstyled">
+                            <a href="https://www.whatsapp.com/?lang=es" target="_blank">
+                                <img class="icono" src="{% static 'tienda/img/whatsapp.png' %}">
+                            </a>
+                            <a href="https://www.facebook.com" target="_blank">
+                                <img class="icono" src="{% static 'tienda/img/facebook.png' %}">
+                            </a>
+                            <a href="https://www.instagram.com" target="_blank">
+                                <img class="icono" src="{% static 'tienda/img/instagram.png' %}">
+                            </a>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </footer>
 

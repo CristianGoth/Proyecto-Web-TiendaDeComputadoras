@@ -1,19 +1,136 @@
 
 body {
-    background-image: url(/img/gamer.png);
+    background-image:url(tienda/img/gamer.png );
     font-family: Arial, Helvetica, sans-serif;
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
     }
 
-  
+    .container.login {
+      width: 30%;
+      margin: 0 auto;
+    }
+    
+    .container.login form {
+      margin-bottom: 30px;
+    }
+    
+    .container.login input,
+    .container.login select,
+    .container.login textarea {
+      width: 100%;
+      font-size: 16px;
+      padding: 8px;
+      margin-bottom: 10px;
+      color: black;
+    }
+    
+    .container.login input[type="submit"] {
+      font-weight: bold;
+      font-size: 18px;
+      color: black;
+    }
+    
+    .text-center {
+      text-align: center;
+      font-size: 18px;
+      color: black;
+    }
+    
+    .fs-5 {
+      font-size: 1.4rem;
+      color: black;
+    }
+    
+    .fst-italic {
+      font-style: italic;
+      color: black;
+    }
+    
+    .fw-bold {
+      font-weight: bold;
+      color: black;
+    }
  
+    #fuente-titulo {
+      padding: 5px;
+      text-align: center;
+    }
+    
+    #fuente-titulo h1 {
+      font-weight: bold;
+      font-size: 28px;
+    }
+    
+    #fuente-titulo p {
+      font-style: italic;
+    }
+    
+    .container.login {
+      width: 75%;
+      margin: 0 auto;
+    }
+    
+    .container.login table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    .container.login th,
+    .container.login td {
+      padding: 8px;
+      border: 1px solid black;
+    }
+    
+    .container.login th {
+      font-weight: bold;
+    }
+    
+    .container.login td {
+      font-weight: normal;
+    }
+    
+    .container.login a {
+      text-decoration: none;
+      color: black;
+    }
+    
+    .container.login a:hover {
+      text-decoration: underline;
+    }
+    
+    .text-center {
+      text-align: center;
+    }
+    
+    .fs-5 {
+      font-size: 1.4rem;
+    }
+    
+    .fst-italic {
+      font-style: italic;
+    }
+    
+    
+    .fw-bold {
+      font-weight: bold;
+    }
+    .container.login select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #000000;
+      border-radius: 4px;
+      box-sizing: border-box;
+      height: 40px;
+      max-width: 300px; /* Ajusta el ancho máximo según tus necesidades */
+    }
+    
   h1 {
     text-align: center;
     margin-top: 10%;
     margin-bottom: 10%;
-    color: beige;
+    color: rgb(0, 0, 0);
   }
   
 
